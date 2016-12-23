@@ -17,7 +17,7 @@
  */
 do_action( 'bp_before_member_header' ); ?>
 
-<div id="item-header-avatar">
+<div id="item-header-avatar" class="Zaphod">
 	<a href="<?php bp_displayed_user_link(); ?>">
 
 		<?php bp_displayed_user_avatar( 'type=full' ); ?>
@@ -28,7 +28,7 @@ do_action( 'bp_before_member_header' ); ?>
 <div id="item-header-content">
 
 	<?php if ( bp_is_active( 'activity' ) && bp_activity_do_mentions() ) : ?>
-		<h2 class="user-nicename">@<?php bp_displayed_user_mentionname(); ?></h2>
+		<h2 class="user-nicename">zoom<?php get_user_display_name(); ?></h2>
 	<?php endif; ?>
 
 	<span class="activity" data-livestamp="<?php bp_core_iso8601_date( bp_get_user_last_activity( bp_displayed_user_id() ) ); ?>"><?php bp_last_activity( bp_displayed_user_id() ); ?></span>
